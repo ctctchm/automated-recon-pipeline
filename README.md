@@ -66,12 +66,6 @@ recon_example_com_20260104_153000/
 | **Nikto** | Web vulnerability scanning |
 | **crt.sh** | Certificate transparency lookup |
 
-## 📸 Screenshots
-
-![Terminal Output](https://via.placeholder.com/800x400?text=Add+Screenshot+Here)
-
-![HTML Report](https://via.placeholder.com/800x400?text=Add+Screenshot+Here)
-
 ## ⚠️ Disclaimer
 
 **FOR EDUCATIONAL AND AUTHORIZED TESTING ONLY**
