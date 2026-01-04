@@ -72,10 +72,6 @@ recon_example_com_20260104_153000/
 
 This tool is designed for security professionals conducting authorized security assessments. Unauthorized access to computer systems is illegal. Always obtain proper written authorization before testing any systems you do not own.
 
-## 📜 License
-
-MIT License - See [LICENSE](LICENSE) file for details
-
 ## 👨‍💻 Author
 
 **ctctchm**
