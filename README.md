@@ -1,88 +1,84 @@
-# 🔍 Automated Recon Pipeline - Kali Native
+# Automated Recon Pipeline
 
-> Professional reconnaissance automation using native Kali Linux tools
-> 
-> **By ctctchm** | [GitHub](https://github.com/ctctchm) | [Portfolio](https://github.com/ctctchm?tab=repositories)
+Reconnaissance automation for penetration testing. Built with native Kali tools.
 
-![Version](https://img.shields.io/badge/version-2.0-blue)
-![Python](https://img.shields.io/badge/python-3.8+-green)
-![License](https://img.shields.io/badge/license-MIT-orange)
+**ctctchm** | [github.com/ctctchm](https://github.com/ctctchm)
 
-## ✨ Features
+---
 
-- 🌐 **Subdomain Enumeration** - DNS brute force, zone transfer, certificate transparency
-- 🔌 **Port Scanning** - Fast Nmap scanning with service detection
-- 🚀 **HTTP Service Detection** - Live web service enumeration
-- ⚠️ **Vulnerability Scanning** - Nikto-based security assessment
-- 📊 **Beautiful Reports** - HTML + JSON output
-- 🎨 **Stylish Terminal UI** - Colored logs and ASCII art
-- 💾 **No Go Required** - Pure Kali native tools
+## What it does
 
-## 🚀 Installation
+Automates the boring parts of recon: subdomain discovery, port scanning, service detection, basic vulnerability checks. Saves time, generates reports.
+
+## Features
+
+- Subdomain enumeration (DNS brute force, zone transfers, cert transparency)
+- Port scanning with Nmap
+- HTTP service probing
+- Nikto vulnerability assessment
+- HTML and JSON reports
+- No Go dependencies, just standard Kali tools
+
+## Setup
+
 ```bash
-# Clone the repository
 git clone https://github.com/ctctchm/automated-recon-pipeline.git
 cd automated-recon-pipeline
-
-# Install dependencies (native Kali tools)
-sudo apt update
-sudo apt install nmap bind9-host dnsutils nikto curl -y
-
-# Make executable
+sudo apt install nmap bind9-host dnsutils nikto curl
 chmod +x recon_pipeline.py
 ```
 
-## 📖 Usage
+## Usage
+
 ```bash
-# Basic scan
 python3 recon_pipeline.py -t example.com
-
-# Custom output directory
-python3 recon_pipeline.py -t example.com -o my_results
-
-# Help menu
-python3 recon_pipeline.py -h
+python3 recon_pipeline.py -t example.com -o results
 ```
 
-## 📂 Output Structure
-```
-recon_example_com_20260104_153000/
-├── report.html          # Beautiful visual report
-├── results.json         # Machine-readable data
-├── subdomains.txt       # List of discovered subdomains
-└── raw_output/          # Raw tool outputs
-    ├── nmap_*.txt
-    ├── nikto_*.txt
-    └── ...
-```
+## Output
 
-## 🛠️ Tools Used
+Creates a timestamped directory with:
+- `report.html` - visual summary
+- `results.json` - structured data
+- `subdomains.txt` - discovered hosts
+- `raw_output/` - complete tool logs
+
+## How it works
+
+1. Enumerates subdomains using multiple methods
+2. Scans ports with Nmap (top 1000)
+3. Probes HTTP/HTTPS services
+4. Runs Nikto on live web services
+5. Aggregates everything into reports
+
+## Tools used
 
 | Tool | Purpose |
 |------|---------|
-| **Nmap** | Port scanning & service detection |
-| **Host/Dig** | DNS enumeration & zone transfers |
-| **Curl** | HTTP service probing |
-| **Nikto** | Web vulnerability scanning |
-| **crt.sh** | Certificate transparency lookup |
+| Nmap | Port scanning |
+| host/dig | DNS queries |
+| curl | HTTP detection |
+| Nikto | Web scanning |
+| crt.sh | Certificate logs |
 
-## ⚠️ Disclaimer
+## Legal
 
-**FOR EDUCATIONAL AND AUTHORIZED TESTING ONLY**
+For authorized testing only. Get permission in writing before scanning anything. Unauthorized access is illegal.
 
-This tool is designed for security professionals conducting authorized security assessments. Unauthorized access to computer systems is illegal. Always obtain proper written authorization before testing any systems you do not own.
+## Notes
 
-## 👨‍💻 Author
+Built this for my cybersecurity portfolio at IPSSI Paris. It's practical, it works, and it demonstrates understanding of recon workflows without overcomplicating things.
 
-**ctctchm**
-- GitHub: [@ctctchm](https://github.com/ctctchm)
-- Portfolio: [View Projects](https://github.com/ctctchm?tab=repositories)
+Code is straightforward Python that orchestrates system tools. Nothing fancy, just effective automation.
 
-## 🌟 Support
+## Contributing
 
-If you find this tool useful, please consider:
-- ⭐ Starring the repository
-- 🐛 Reporting bugs via Issues
-- 🔀 Contributing via Pull Requests
+Issues and PRs welcome if you find bugs or have improvements.
+
+## License
+
+MIT
 
 ---
+
+**ctctchm** • 2026
